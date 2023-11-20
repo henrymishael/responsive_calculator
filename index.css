@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: sans-serif;
+}
+
+.app {
+   display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    width: 25em;
+    margin: 5em auto;
+}
+
+.calculator {
+    background-color: #222520;
+    width: 100%;
+    /* max-width: 375px;
+    min-height: 640px; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+ .display {
+    min-height: 100px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    text-align: right;
+    flex: 1 1 0%;
+}
+
+.display .input {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem 0 ;
+    max-width: 100%;
+}
+
+.display .output {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.display .operator {
+    color: #Eb6666;
+}
+
+.display .brackets,
+.display .percent {
+    color: #25FED7;
+}
+
+.keys {
+    /* background-color: #292D35;
+    padding: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1rem;
+    box-shadow: 0px -2px 16px rgba(0, 0, 0 , 0.2); */
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 0.7em 0;
+    margin: auto 0.5em;
+    
+}
+
+.keys .key {
+    /* position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    background-color: #262933;
+    border-radius: 1rem;
+    transition: 0.2s;
+    user-select: none; */
+
+    background: #222;
+    color: #fff;
+    height: 4.5em;
+    cursor:pointer;
+    margin: 0.5em;
+    border: unset;
+    border-radius: 0.5em;
+    outline: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .keys .key span {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff; 
+} */
+
+.keys .key:hover {
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.keys .key:active {
+    transform: translateY(0.5em);
+}
+
+.keys .key.operator  {
+    background: #EB6666;
+}
+
+.keys .key.action  {
+    background: teal;
+} 
+
+@media screen and (max-width: 768px) {
+    .app {
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+    } 
+   
+}
