@@ -6,6 +6,15 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="assets/icon-192.png" type="image/x-icon">
+    <script>
+        //check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // use the window load event to eep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js');
+            })
+        }
+    </script>
 </head>
 <body>
     <div class="app">
@@ -85,6 +94,7 @@
             </div>
         </div>
     </div>
+   
     <script src="index.js"></script>
 </body>
 </html>
